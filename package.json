@@ -1,0 +1,17 @@
+{
+  "name": "universal-calculator",
+  "version": "0.0.1",
+  "description": "Calculator to calculate any number of any length and any type",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "universal-calculator"
+  ],
+  "author": "Shubham Aswal",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.1"
+  }
+}
