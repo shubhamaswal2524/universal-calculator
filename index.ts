@@ -148,8 +148,7 @@ const decimalAndECalculation = (newNum1: any, newNum2: any) => {
       0,
       0
     );
-    // console.log("baseValueMultiplication", splittedEValue[0], newNum2);
-    // console.log("first", newNum1, newNum2);
+
     if (isENegative) {
       weiValue = "1";
       newDecimals1 = Number(splittedEValue[1]);
@@ -168,111 +167,6 @@ const decimalAndECalculation = (newNum1: any, newNum2: any) => {
 };
 
 const scientificCheck = (newNum1: any, newNum2: any, type: any) => {
-  // if (type == 2) {
-  //   // conditional check
-
-  //   if (newNum1?.includes("+")) splittedEValue = newNum1.split("e+");
-  //   else if (newNum1?.includes("-")) {
-  //     splittedEValue = newNum1.split("e-");
-  //     isENegative = true;
-  //   } else if (!newNum1?.includes("+") && !newNum1?.includes("-")) {
-  //     splittedEValue = newNum1.split("e");
-  //   }
-
-  //   if (splittedEValue[0]?.includes(".")) {
-  //     baseValueMultiplication = multiplicationLogic(
-  //       splittedEValue[0]?.replace(".", ""),
-  //       newNum2,
-  //       0,
-  //       0
-  //     );
-
-  //     eDecimals =
-  //       splittedEValue[0]?.length - splittedEValue[0]?.indexOf(".") - 1;
-  //     if (eDecimals <= splittedEValue[1]) {
-  //       weiValue = isENegative
-  //         ? "1"
-  //         : "1".padEnd(splittedEValue[1] - eDecimals + 1, "0");
-  //       newDecimals1 = isENegative
-  //         ? Number(splittedEValue[1]) + Number(eDecimals)
-  //         : 0;
-
-  //       console.log("weiValue", weiValue, newDecimals1);
-  //     } else {
-  //       weiValue = "1";
-  //       newDecimals1 = isENegative
-  //         ? Number(eDecimals) + Number(splittedEValue[1])
-  //         : eDecimals - splittedEValue[1];
-  //     }
-  //     newDecimals1 = isENegative ? -newDecimals1 : newDecimals1;
-  //   } else {
-  //     baseValueMultiplication = multiplicationLogic(
-  //       splittedEValue[0],
-  //       newNum2,
-  //       0,
-  //       0
-  //     );
-  //     console.log("first", newNum1, newNum2);
-  //     if (isENegative) {
-  //       weiValue = "1";
-  //       newDecimals1 = Number(splittedEValue[1]);
-  //       newDecimals1 = -newDecimals1;
-  //     } else {
-  //       weiValue = "1".padEnd(Number(splittedEValue[1]) + 1, "0");
-  //     }
-  //   }
-  // }
-
-  // ====================================>>>>>>>>>>>>>>>>>>>>>>
-
-  // if (type == 3) {
-  //   if (newNum2?.includes("+")) splittedEValue = newNum2.split("e+");
-  //   else if (newNum2?.includes("-")) {
-  //     splittedEValue = newNum2.split("e-");
-  //     isENegative = true;
-  //   } else if (!newNum2?.includes("+") && !newNum2?.includes("-")) {
-  //     splittedEValue = newNum2.split("e");
-  //   }
-  //   if (splittedEValue[0]?.includes(".")) {
-  //     baseValueMultiplication = multiplicationLogic(
-  //       splittedEValue[0]?.replace(".", ""),
-  //       newNum1,
-  //       0,
-  //       0
-  //     );
-
-  //     eDecimals =
-  //       splittedEValue[0]?.length - splittedEValue[0]?.indexOf(".") - 1;
-  //     if (eDecimals <= splittedEValue[1]) {
-  //       weiValue = isENegative
-  //         ? "1"
-  //         : "1".padEnd(splittedEValue[1] - eDecimals + 1, "0");
-  //       newDecimals1 = isENegative
-  //         ? Number(splittedEValue[1]) + Number(eDecimals)
-  //         : 0;
-  //     } else {
-  //       weiValue = "1";
-  //       newDecimals1 = isENegative
-  //         ? Number(eDecimals) + Number(splittedEValue[1])
-  //         : eDecimals - splittedEValue[1];
-  //     }
-  //     newDecimals1 = isENegative ? -newDecimals1 : newDecimals1;
-  //   } else {
-  //     baseValueMultiplication = multiplicationLogic(
-  //       splittedEValue[0],
-  //       newNum1,
-  //       0,
-  //       0
-  //     );
-  //     if (isENegative) {
-  //       weiValue = "1";
-  //       newDecimals1 = Number(splittedEValue[1]);
-  //       newDecimals1 = -newDecimals1;
-  //     } else {
-  //       weiValue = "1".padEnd(Number(splittedEValue[1]) + 1, "0");
-  //     }
-  //   }
-  // }
   let calculatedOutput: any = {};
   let firstEValueCalculated: any;
   let secondValuecalculated: any;
