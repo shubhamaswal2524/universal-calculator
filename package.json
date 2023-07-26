@@ -1,5 +1,5 @@
 {
-  "name": "universal-calculator-pro",
+  "name": "universal-calculator-pro1",
   "version": "0.0.1",
   "description": "Calculator to calculate any number of any length and any type",
   "main": "index.ts",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "universal-calculator-pro"
+    "universal-calculator-pro1"
   ],
   "author": "Shubham Aswal",
   "license": "ISC",
