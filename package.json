@@ -1,5 +1,5 @@
 {
-  "name": "qazwsx",
+  "name": "qazwsx123qwee",
   "version": "0.0.1",
   "description": "Calculator to calculate any number of any length and any type",
   "main": "index.ts",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "qazwsx"
+    "qazwsx123qwee"
   ],
   "author": "Shubham Aswal",
   "license": "ISC",
