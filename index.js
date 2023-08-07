@@ -12,19 +12,19 @@
 // 51 - num2 is not a number
 // 52 - num1 and num2 are not a number
 
-const toCustomFixed = (num: any, fixed: number) => {
+const toCustomFixed = (num, fixed) => {
   const re = new RegExp("^-?\\d+(?:.\\d{0," + (fixed || -1) + "})?");
   return num.toString().match(re)[0];
 };
 
-function isNegative(num: any) {
+function isNegative(num) {
   if (Math.sign(num) === -1) {
     return true;
   }
   return false;
 }
 
-const checkNumberTypes = (newNum1: any, newNum2: any) => {
+const checkNumberTypes = (newNum1, newNum2) => {
   if (isNaN(newNum1)) return 50;
   else if (isNaN(newNum2)) return 51;
   else if (isNaN(newNum1) && isNaN(newNum2)) return 52;
@@ -85,13 +85,13 @@ const checkNumberTypes = (newNum1: any, newNum2: any) => {
   else return 10;
 };
 
-const decimalAndECalculation = (newNum1: any, newNum2: any) => {
-  let splittedEValue: any;
-  let baseValueMultiplication: any;
-  let eDecimals: any;
-  let isENegative: any;
-  let newDecimals1: any;
-  let weiValue: any;
+const decimalAndECalculation = (newNum1, newNum2) => {
+  let splittedEValue;
+  let baseValueMultiplication;
+  let eDecimals;
+  let isENegative;
+  let newDecimals1;
+  let weiValue;
 
   if (newNum1?.includes("+")) splittedEValue = newNum1.split("e+");
   else if (newNum1?.includes("-")) {
@@ -151,11 +151,11 @@ const decimalAndECalculation = (newNum1: any, newNum2: any) => {
   };
 };
 
-const scientificCheck = (newNum1: any, newNum2: any, type: any) => {
-  let calculatedOutput: any = {};
-  let firstEValueCalculated: any;
-  let secondValuecalculated: any;
-  let decimalLength: any;
+const scientificCheck = (newNum1, newNum2, type) => {
+  let calculatedOutput = {};
+  let firstEValueCalculated;
+  let secondValuecalculated;
+  let decimalLength;
   if (type == 2) {
     calculatedOutput = decimalAndECalculation(newNum1, newNum2);
   } else if (type == 3) {
@@ -208,7 +208,7 @@ const scientificCheck = (newNum1: any, newNum2: any, type: any) => {
   };
 };
 
-const validateNumbers = (val1: any, val2: any) => {
+const validateNumbers = (val1, val2) => {
   let newNum1 = val1?.toString();
   let newNum2 = val2?.toString();
   let length1 = newNum1?.length;
@@ -236,7 +236,7 @@ const validateNumbers = (val1: any, val2: any) => {
       };
 
     case 2:
-      let case2: any = scientificCheck(newNum1, newNum2, 2);
+      let case2 = scientificCheck(newNum1, newNum2, 2);
       return {
         num1: case2?.nume1,
         num2: case2?.nume2,
@@ -244,7 +244,7 @@ const validateNumbers = (val1: any, val2: any) => {
         decimals2: 0,
       };
     case 3:
-      let case3: any = scientificCheck(newNum1, newNum2, 3);
+      let case3 = scientificCheck(newNum1, newNum2, 3);
       return {
         num1: case3?.nume1,
         num2: case3?.nume2,
@@ -274,7 +274,7 @@ const validateNumbers = (val1: any, val2: any) => {
         decimals2: newNum2?.length - newNum2?.indexOf(".") - 1,
       };
     case 7:
-      let case7: any = scientificCheck(newNum1, newNum2, 7);
+      let case7 = scientificCheck(newNum1, newNum2, 7);
       return {
         num1: case7?.nume1,
         num2: case7?.nume2,
@@ -282,7 +282,7 @@ const validateNumbers = (val1: any, val2: any) => {
         decimals2: 0,
       };
     case 8:
-      let case8: any = scientificCheck(newNum1, newNum2, 8);
+      let case8 = scientificCheck(newNum1, newNum2, 8);
       return {
         num1: case8?.nume1,
         num2: case8?.nume2,
@@ -290,7 +290,7 @@ const validateNumbers = (val1: any, val2: any) => {
         decimals2: 0,
       };
     case 9:
-      let case9: any = scientificCheck(newNum1, newNum2, 9);
+      let case9 = scientificCheck(newNum1, newNum2, 9);
       return {
         num1: case9?.nume1,
         num2: case9?.nume2,
@@ -300,13 +300,7 @@ const validateNumbers = (val1: any, val2: any) => {
   }
 };
 
-const multiplicationLogic = (
-  num1: any,
-  num2: any,
-  decimals1: any,
-  decimals2: any,
-  isNegative: any
-) => {
+const multiplicationLogic = (num1, num2, decimals1, decimals2, isNegative) => {
   let len2;
   let len1;
   len1 = num1?.length;
@@ -412,10 +406,10 @@ const multiplicationLogic = (
   return s;
 };
 
-function multiply(val1: string, val2: string) {
-  let newVal1: any = val1;
-  let newVal2: any = val2;
-  let isNegative: any;
+function uniquemultiplier(val1, val2) {
+  let newVal1 = val1;
+  let newVal2 = val2;
+  let isNegative;
   if (newVal1?.includes("-") && !newVal2?.includes("-")) {
     isNegative = 1;
     val1 = val1?.split("-")[1];
@@ -431,9 +425,9 @@ function multiply(val1: string, val2: string) {
   }
   if (!newVal1?.includes("-") && !newVal2?.includes("-")) isNegative = 0;
 
-  const { num1, num2, decimals1, decimals2 }: any = validateNumbers(val1, val2);
+  const { num1, num2, decimals1, decimals2 } = validateNumbers(val1, val2);
 
   return multiplicationLogic(num1, num2, decimals1, decimals2, isNegative);
 }
 
-module.exports = multiply;
+module.exports = uniquemultiplier;
