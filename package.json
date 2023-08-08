@@ -1,5 +1,5 @@
 {
-  "name": "uniquemultiplier",
+  "name": "dummytest2023",
   "version": "0.0.1",
   "description": "Calculator to calculate any number of any length and any type",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "uniquemultiplier"
+    "dummytest2023"
   ],
   "author": "Shubham Aswal",
   "license": "ISC",
