@@ -7,24 +7,20 @@ A big number multiplier with any values , takes two input and must be string.
 ## Installation
 
 ```
-npm install --save dummytest2023
+npm install --save dummytest20234
 ```
 
 ## Usage:
 
 ```javascript
-import {multiplier} from "dummytest2023";
+import { multiplier } from "dummytest20234";
 
 
 let value1 = "123456"
 let value2 = "987654"
 const multipliedValue = multiplier(value1,value2)
 
-### Credits
-
-### [Shubham Aswal](https://www.linkedin.com/in/shubham-aswal-528462130)
-
-### Contributing
+console.log("multipliedValue",multipliedValue)
 
 Upcoming Features
 
