@@ -415,6 +415,18 @@ export function multiplier(val1, val2) {
       output: 0,
     };
   }
+  const validType = checkNumberTypes(newNum1, newNum2);
+  if (
+    validType == 10 ||
+    validType == 50 ||
+    validType == 51 ||
+    validType == 52
+  ) {
+    return {
+      input: "invalid input",
+      output: 0,
+    };
+  }
   let newVal1 = val1;
   let newVal2 = val2;
   let isNegative;
