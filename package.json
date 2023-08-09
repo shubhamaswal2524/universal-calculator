@@ -1,6 +1,6 @@
 {
   "name": "universal-calci-pro",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Calculator to calculate big number operations",
   "main": "index.js",
   "scripts": {
