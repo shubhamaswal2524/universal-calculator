@@ -7,13 +7,13 @@ A big number multiplier with any values , takes two input and must be string.
 ## Installation
 
 ```
-npm install --save dummytest202345
+npm install --save dummytest2023456
 ```
 
 ## Usage:
 
 ```javascript
-import { multiplier } from "dummytest202345";
+import { multiplier } from "dummytest2023456";
 
 
 let value1 = "123456"

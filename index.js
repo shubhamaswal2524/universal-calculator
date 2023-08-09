@@ -24,8 +24,6 @@ function isNegative(num) {
   return false;
 }
 
-import { toCustomFixed } from "./helper";
-
 const checkNumberTypes = (newNum1, newNum2) => {
   if (isNaN(newNum1)) return 50;
   else if (isNaN(newNum2)) return 51;
@@ -409,13 +407,9 @@ const multiplicationLogic = (num1, num2, decimals1, decimals2, isNegative) => {
 };
 
 export function multiplier(val1, val2) {
-  if (typeof val1 != "string" || typeof val2 != "string") {
-    return {
-      input: "invalid , expected numbers as string !",
-      output: 0,
-    };
-  }
-  const validType = checkNumberTypes(newNum1, newNum2);
+  let newVal1 = val1?.toString();
+  let newVal2 = val2?.toString();
+  const validType = checkNumberTypes(newVal1, newVal2);
   if (
     validType == 10 ||
     validType == 50 ||
@@ -427,8 +421,6 @@ export function multiplier(val1, val2) {
       output: 0,
     };
   }
-  let newVal1 = val1;
-  let newVal2 = val2;
   let isNegative;
   if (newVal1?.includes("-") && !newVal2?.includes("-")) {
     isNegative = 1;
@@ -453,4 +445,4 @@ export function multiplier(val1, val2) {
   };
 }
 
-module.exports = { multiplier };
+export { multiplier };
