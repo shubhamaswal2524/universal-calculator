@@ -7,14 +7,14 @@ A big number multiplier with any values , takes two input and must be string.
 ## Installation
 
 ```
-npm install --save universal-calci
+npm install --save universal-calci-pro
 ```
 
 ## Usage:
 
 ```javascript
 `// @ts-ignore`  `for typescript`
-import { multiplier } from "universal-calci";
+import { multiplier } from "universal-calci-pro";
 
 
 let value1 = num1  `should be string format`
