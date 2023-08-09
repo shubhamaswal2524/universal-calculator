@@ -7,17 +7,18 @@ A big number multiplier with any values , takes two input and must be string.
 ## Installation
 
 ```
-npm install --save dummytest2023456
+npm install --save universal-calci
 ```
 
 ## Usage:
 
 ```javascript
-import { multiplier } from "dummytest2023456";
+`// @ts-ignore`  `for typescript`
+import { multiplier } from "universal-calci";
 
 
-let value1 = "123456"
-let value2 = "987654"
+let value1 = num1  `should be string format`
+let value2 = num2  `should be string format`
 const multipliedValue = multiplier(value1,value2)
 
 console.log("multipliedValue",multipliedValue)

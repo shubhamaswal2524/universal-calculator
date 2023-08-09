@@ -406,7 +406,13 @@ const multiplicationLogic = (num1, num2, decimals1, decimals2, isNegative) => {
   return s;
 };
 
-export function multiplier(val1, val2) {
+function multiplier(val1, val2) {
+  if (typeof val1 != "string" || typeof val2 != "string") {
+    return {
+      input: "invalid , expected numbers as string !",
+      output: 0,
+    };
+  }
   let newVal1 = val1?.toString();
   let newVal2 = val2?.toString();
   const validType = checkNumberTypes(newVal1, newVal2);
