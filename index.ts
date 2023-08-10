@@ -309,6 +309,13 @@ const multiplicationLogic = (
 ) => {
   let len2: any;
   let len1: any;
+
+  while (num1.charAt(0) === "0") {
+    num1 = num1.substring(1);
+  }
+  while (num2.charAt(0) === "0") {
+    num2 = num2.substring(1);
+  }
   len1 = num1?.length;
   len2 = num2?.length;
   if (!len1 || !len2) return 0;
@@ -434,21 +441,20 @@ function multiplier(val1: any, val2: any) {
     };
   }
   let isNegative;
-  if (newVal1?.includes("-") && !newVal2?.includes("-")) {
+  if (newVal1?.charAt(0) == "-" && newVal2?.charAt(0) != "-") {
     isNegative = 1;
     val1 = val1?.split("-")[1];
   }
-  if (!newVal1?.includes("-") && newVal2?.includes("-")) {
+  if (newVal1?.charAt(0) != "-" && newVal2?.charAt(0) == "-") {
     val2 = val2?.split("-")[1];
     isNegative = 1;
   }
-  if (newVal1?.includes("-") && newVal2?.includes("-")) {
+  if (newVal1?.charAt(0) == "-" && newVal2?.charAt(0) == "-") {
     isNegative = 0;
     val1 = val1?.split("-")[1];
     val2 = val2?.split("-")[1];
   }
-  if (!newVal1?.includes("-") && !newVal2?.includes("-")) isNegative = 0;
-
+  if (newVal1?.charAt(0) != "-" && newVal2?.charAt(0) != "-") isNegative = 0;
   const { num1, num2, decimals1, decimals2 } = validateNumbers(val1, val2);
 
   return {
