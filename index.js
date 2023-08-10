@@ -326,26 +326,20 @@ const multiplicationLogic = (num1, num2, decimals1, decimals2, isNegative) => {
     }
     if (decimals1 || decimals2) {
         let finalDecimal = Number(decimals1) + Number(decimals2);
-        if (finalDecimal < 0) {
-            finalDecimal = finalDecimal < 0 ? -finalDecimal : finalDecimal;
-            if (finalDecimal < s.length) {
-                s =
-                    s.slice(0, s.length - finalDecimal) +
-                        "." +
-                        s.slice(s.length - finalDecimal, s.length);
-            }
-            else if (finalDecimal == s.length) {
-                s = "0" + "." + s;
-            }
-            else {
-                s = "0" + "." + "0".padStart(finalDecimal - s.length, "0") + s;
-            }
-        }
-        else {
+        // let negativeDigits = s.length + finalDecimal;
+        // negativeDigits = negativeDigits < 0 ? -negativeDigits : negativeDigits;
+        finalDecimal = finalDecimal < 0 ? -finalDecimal : finalDecimal;
+        if (finalDecimal < s.length) {
             s =
                 s.slice(0, s.length - finalDecimal) +
                     "." +
                     s.slice(s.length - finalDecimal, s.length);
+        }
+        else if (finalDecimal == s.length) {
+            s = "0" + "." + s;
+        }
+        else {
+            s = "0" + "." + "0".padStart(finalDecimal - s.length, "0") + s;
         }
     }
     if (s === null || s === void 0 ? void 0 : s.includes(".")) {
